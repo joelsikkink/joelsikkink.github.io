@@ -21,7 +21,7 @@ The snowboard project in highschool was for my final project in AP Computer Scie
 
 I worked alone on this project and this is probably where I really had my eyes opened to the power of programming. I realized while doing this project about how all of the pieces I had learned through the year clicked together. I realized I could use arrays as a storage for each proceedurally generated line and I also learned the importance of google while working on any project. A lot of googling was done but I was given a lengthy time frame to complete the project and a decent bit of help in class thanks to my teacher.
 
-Here is some code that illustrates how we read values from the line sensors:
+This is some of the code I wrote that ran the core of the game:
 
 ```js
 SwingWorker<Void, String> worker = new SwingWorker<Void, String>(){
