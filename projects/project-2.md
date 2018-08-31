@@ -2,8 +2,8 @@
 layout: project
 type: project
 image: Sudoks.png
-title: Vacay
-permalink: projects/vacay
+title: Sudoku
+permalink: projects/Sudoku
 # All dates must be YYYY-MM-DD format!
 date: 2017-12-3
 labels:
