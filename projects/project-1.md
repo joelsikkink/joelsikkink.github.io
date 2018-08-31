@@ -10,7 +10,7 @@ labels:
   - Programming
   - Java
   - High School
-summary: I developed a basic game using my limited high school knowledge of Java
+summary: Basic avoid the obstacle snowboarding game I created in High School 
 ---
 
 <div class="ui small rounded images">
