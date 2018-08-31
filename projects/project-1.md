@@ -1,44 +1,100 @@
 ---
 layout: project
 type: project
-image: images/micromouse.jpg
-title: Micromouse
-permalink: projects/micromouse
+image: images/Snowboard.jpg
+title: Snowboard Game
+permalink: projects/snowboard-game
 # All dates must be YYYY-MM-DD format!
-date: 2015-07-01
+date: 2018-08-30
 labels:
-  - Robotics
-  - Arduino
-  - C++
-summary: My team developed a robotic mouse that won first place in the 2015 UH Micromouse competition.
+  - Programming
+  - Java
+  - High School
+summary: I developed a basic game using my limited high school knowledge of Java
 ---
 
 <div class="ui small rounded images">
-  <img class="ui image" src="../images/micromouse-robot.png">
-  <img class="ui image" src="../images/micromouse-robot-2.jpg">
-  <img class="ui image" src="../images/micromouse.jpg">
-  <img class="ui image" src="../images/micromouse-circuit.png">
+  <img class="ui image" src="../images/Snowboard.jpg">
 </div>
 
-Micromouse is an event where small robot “mice” solve a 16 x 16 maze.  Events are held worldwide.  The maze is made up of a 16 by 16 gird of cells, each 180 mm square with walls 50 mm high.  The mice are completely autonomous robots that must find their way from a predetermined starting position to the central area of the maze unaided.  The mouse will need to keep track of where it is, discover walls as it explores, map out the maze and detect when it has reached the center.  having reached the center, the mouse will typically perform additional searches of the maze until it has found the most optimal route from the start to the center.  Once the most optimal route has been determined, the mouse will run that route in the shortest possible time.
+The snowboard project in highschool was for my final project in AP Computer Science Principles and was meant to represent all of what I learned throughout the school year. I decided to go with java as I had enough experience in it through another AP Computer Science course I took the same year. The game was basically a "SkiFree" clone that most people have played on windows XP at one point or another. I put my own twist on it as I chose to use a snowboard instead of skis and go with a simpler art style. I also didn't include a yeti which I realise now was a missed oppritunity.   
 
-For this project, I was the lead programmer who was responsible for programming the various capabilities of the mouse.  I started by programming the basics, such as sensor polling and motor actuation using interrupts.  From there, I then programmed the basic PD controls for the motors of the mouse.  The PD control the drive so that the mouse would stay centered while traversing the maze and keep the mouse driving straight.  I also programmed basic algorithms used to solve the maze such as a right wall hugger and a left wall hugger algorithm.  From there I worked on a flood-fill algorithm to help the mouse track where it is in the maze, and to map the route it takes.  We finished with the fastest mouse who finished the maze within our college.
+I worked alone on this project and this is probably where I really had my eyes opened to the power of programming. I realized while doing this project about how all of the pieces I had learned through the year clicked together. I realized I could use arrays as a storage for each proceedurally generated line and I also learned the importance of google while working on any project. A lot of googling was done but I was given a lengthy time frame to complete the project and a decent bit of help in class thanks to my teacher.
 
 Here is some code that illustrates how we read values from the line sensors:
 
 ```js
-byte ADCRead(byte ch)
-{
-    word value;
-    ADC1SC1 = ch;
-    while (ADC1SC1_COCO != 1)
-    {   // wait until ADC conversion is completed   
-    }
-    return ADC1RL;  // lower 8-bit value out of 10-bit data from the ADC
-}
+SwingWorker<Void, String> worker = new SwingWorker<Void, String>(){
+            @Override 
+            protected Void doInBackground() throws Exception{
+                
+                boolean dead = false;
+                
+                while(ingame == true)
+                {
+                    String all = "";
+                    //Moves character based on orientation
+                    if(playerString.equals("\\")){
+                        player++;
+                    }
+                    else if(playerString.equals("/")){
+                        player--;
+                    }
+                    //Iterate through each row in the window in each iteration
+                    for(int j = currentRow; j < windowRow +currentRow; j++)
+                    {
+                        String currentLine = "";
+                        //Ierates through each column
+                        for(int o = 0; o< windowCol; o++)
+                        {
+                            //If same location as player
+                            if(j == center && o == player){
+                                //if player is on rock tree or edge they die
+                                if(env[j][o].equals("<span style=\"color:gray\">&#9679;</span>") || env[j][o].equals("<span style=\"color:green\">&#9650;</span>") || env[j][o].equals("<span style=\"color:black\">!</span>")){
+                                    //sets character model to X and ends the game
+                                    currentLine = currentLine+"<span style=\"color:red\">X</span>";
+                                    dead = true;
+                                    ingame = false;
+                                }
+                                else{
+                                    //Setting player orientation to current location
+                                    currentLine = currentLine + "<span style=\"color:red\">"+playerString+"</span>";
+                                }
+                            }
+                            else if(dead == true && j == (windowRow+currentRow-1)){
+                                // Game over line set
+                                currentLine = "<span style=\"color:black;font: bold 24px arial, sans-serif;\">Game Over</span>";
+                            }
+                            else{
+                                //creates new line for current row
+                                currentLine = currentLine + env[j][o];
+                            }
+                        }
+                        //If you hit the final line, you win appears
+                        if(j == 55){
+                            currentLine = "<span style=\"color:black;font: bold 24px arial, sans-serif;\">You Win!</span>";
+                        }
+                        
+                        //Taking current line into a new line in the game string
+                        all = all + "<br>"+currentLine;
+                        
+                    }
+                    //Increment the row and center up
+                    currentRow++;       
+                    center++;
+                    System.out.println("Row is "+currentRow);
+                    //SwingWorker sends final string to publish class for UI updating
+                    publish(all);
+                    //Waits to allow gameplay
+                    Thread.sleep(600);
+                    //Ends game if finsish line is passed
+                    if(currentRow == 50) ingame = false; 
+                }
+                //Returns null since void
+                return null;
+            }
 ```
 
-You can learn more at the [UH Micromouse Website](http://www-ee.eng.hawaii.edu/~mmouse/about.html).
 
 
 
