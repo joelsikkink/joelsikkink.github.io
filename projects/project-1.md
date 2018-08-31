@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: images/Snowboard.jpg
+image: images/Snowboard.png
 title: Snowboard Game
 permalink: projects/snowboard-game
 # All dates must be YYYY-MM-DD format!
@@ -14,7 +14,7 @@ summary: I developed a basic game using my limited high school knowledge of Java
 ---
 
 <div class="ui small rounded images">
-  <img class="ui image" src="../images/Snowboard.jpg">
+  <img class="ui image" src="../images/Snowboard.png">
 </div>
 
 The snowboard project in highschool was for my final project in AP Computer Science Principles and was meant to represent all of what I learned throughout the school year. I decided to go with java as I had enough experience in it through another AP Computer Science course I took the same year. The game was basically a "SkiFree" clone that most people have played on windows XP at one point or another. I put my own twist on it as I chose to use a snowboard instead of skis and go with a simpler art style. I also didn't include a yeti which I realise now was a missed oppritunity.   
