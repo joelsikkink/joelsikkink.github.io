@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: cisco-switch.jpg
+image: images/cisco-switch.jpg
 title: ResNet
 permalink: projects/ResNet
 # All dates must be YYYY-MM-DD format!
