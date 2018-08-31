@@ -5,7 +5,7 @@ image: cisco-switch.jpg
 title: ResNet
 permalink: projects/ResNet
 # All dates must be YYYY-MM-DD format!
-date: 2017-07-16-Present
+date: 2017-07-16
 labels:
   - Cisco
   - Networking
