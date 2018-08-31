@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Joel Sikkink",
-    "label": "Student, IT Specialist",
+    "label": "Student, ResNet Support Specialist",
     "picture": "https://techfolios.github.io/template/images/molly.png",
     "email": "jsikkink@hawaii.edu",
     "phone": "808-333-4444",
@@ -22,8 +22,8 @@
       },
       {
         "network": "linkedin",
-        "username": "mollymaluhia",
-        "url": "http://linkedin.com/in/changeme"
+        "username": "Joel Sikkink",
+        "url": "https://www.linkedin.com/in/joel-sikkink-7429a116b/"
       },
     ]
   },
@@ -86,7 +86,7 @@
   "work": [
     {
       "company": "UH Manoa Student Housing Services",
-      "position": "IT Specialist",
+      "position": "ResNet Support Specialist",
       "website": "https://manoa.hawaii.edu/housing/resnet",
       "startDate": "2017-07-16",
       "endDate": "Present",
