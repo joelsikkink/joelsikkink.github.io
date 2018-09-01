@@ -85,10 +85,21 @@
   ],
   "work": [
     {
+      "company": "Jamba Juice",
+      "position": "Team Member",
+      "website": "https://manoa.hawaii.edu/housing/resnet",
+      "startDate": "2016-06-13",
+      "endDate": "2017-07-08",
+      "summary": "Mixed smoothies, ran a register, worked as an effective team member",
+      "highlights": [
+        "Worked well with all of my co-workers and would still consider many as good friends to this day"
+      ]
+    },
+    {
       "company": "UH Manoa Student Housing Services",
       "position": "ResNet Support Specialist",
       "website": "https://manoa.hawaii.edu/housing/resnet",
-      "startDate": "2017-07-16",
+      "startDate": "2017-07-10",
       "endDate": "Present",
       "summary": "General IT and system administrator assistant",
       "highlights": [
