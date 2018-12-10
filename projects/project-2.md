@@ -20,4 +20,4 @@ My team and I created a fairly sophisticated sudoku game for ICS 111 last year. 
 Sudoku was where I learned and tought my team on how to use GitHub. I spent an afternoon or two learning Github and then taught it to my team so that we could have effective version control. That is especially important when dealing with complex Samurai mode solving algorithms
 
 
-Source: <a href="https://https://joelsikkink.github.io/Project3/"><i class="large github icon"></i>Sudoku</a>
+Source: <a href="https://joelsikkink.github.io/Project3/"><i class="large github icon"></i>Sudoku</a>

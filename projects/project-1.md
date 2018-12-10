@@ -5,7 +5,7 @@ image: images/Snowboard.png
 title: Snowboard Game
 permalink: projects/snowboard-game
 # All dates must be YYYY-MM-DD format!
-date: 2018-08-30
+date: 2017-03-22
 labels:
   - Programming
   - Java
