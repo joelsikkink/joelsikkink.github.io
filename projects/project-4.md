@@ -3,7 +3,7 @@ layout: project
 type: project
 image: images/userlanding.png
 title: ResNet
-permalink: projects/ResNet
+permalink: projects/JiffyJobs
 # All dates must be YYYY-MM-DD format!
 date: 2018-12-06
 labels:
