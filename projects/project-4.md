@@ -2,7 +2,7 @@
 layout: project
 type: project
 image: images/userlanding.png
-title: ResNet
+title: Jiffy Jobs
 permalink: projects/JiffyJobs
 # All dates must be YYYY-MM-DD format!
 date: 2018-12-06
